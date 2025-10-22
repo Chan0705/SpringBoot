@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>view03</title>
+</head>
+<body>
+	<!-- text는 html 태그 미적용, 문자열 출력	-->
+	<!-- java 코드란에 있는 html태그를 그대로 보여주냐 안보여주냐의 차이	-->
+	<h2 th:text="${data1}"></h2>
+	<!-- utext는 html 태그 적용, u = unescape	-->
+	<h2 th:utext="${data2}"></h2>
+</body>
+</html>
