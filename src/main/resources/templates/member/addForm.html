@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+<head>
+	<meta charset="UTF-8">
+	<title>Practice01</title>
+</head>
+<body>
+	<div id="content">
+		<h2>실습문제 1</h2>
+		<hr>
+		<h3>회원등록</h3>
+		<form th:action="@{/members/add}" method="post"> <!-- 1차 url -->
+			<p>
+				name: <input type="text" name="name">
+			</p>
+			<p>
+				email: <input type="text" name="email">
+			</p>
+			<p>
+				<input type="submit" value="전송">
+			</p>
+		</form>
+	</div>
+</body>
+</html>

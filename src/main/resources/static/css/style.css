@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 5px 10px;
 }
 
 #display{
@@ -16,4 +17,14 @@
 img{
     width: 80%;
     height: 100%;
+}
+
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table th, td{
+    border: 1px solid black;
+    padding: 5px 10px;
 }
