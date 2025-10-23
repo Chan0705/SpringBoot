@@ -26,4 +26,10 @@ public class MemberRepository {
         return member;
     }
 
+    // 회원 목록 보기
+    public List<MemberDTO> findAll(){
+        return list;
+    }
+
+
 }

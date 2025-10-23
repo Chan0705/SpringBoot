@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.List;
+
 
 @RequestMapping("/members") // 차 url
 @AllArgsConstructor // 생성자 주입(=new와 동일한 기능)
@@ -38,7 +40,12 @@ public class MemberController {
     // 회웜 목록
     @GetMapping // 2차 url이 없을 경우 1차 url로 자동 연결
     public String list(Model model){
+        List<MemberDTO> members = repository.findAll();
+        //members 모델을 저장 후 뷰로 전달
+        model.addAttribute("members", members);
         return "member/members";
     }
+
+    //
 
 }

@@ -8,6 +8,7 @@
 <body>
 	<div id="content">
 		<h2>실습문제 1</h2>
+		<p><a th:href="@{/}">홈</a></p>
 		<hr>
 		<h3>회원목록</h3>
 		<table>
@@ -16,6 +17,15 @@
 				<th>Name</th>
 				<th>E-mail</th>
 			</tr>
+			<tbody>
+				<tr th:each="member: ${members}">
+					<!-- = member.getId -->
+					<td th:text="${member.id}"></td>
+					<td th:text="${member.name}"></td>
+					<td th:text="${member.email}"></td>
+				</tr>
+
+			</tbody>
 
 		</table>
 
